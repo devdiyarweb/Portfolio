@@ -1,0 +1,39 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.nav__logo{
+    padding: 10px 15px;
+    width: 300px;
+}
+
+.nav__logo-div{
+    display: flex;
+}
+.nav__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.nav__link a{
+    font-family: 'Space Mono', monospace;
+    color: #000;
+    font-size: 22px;
+    padding: 10px 15px;
+    margin: 0 25px;
+    background: transparent;
+    border-radius: 25px;
+    transition: 400ms;
+}
+.nav__link a:hover{
+    box-shadow: 0 0.5rem 2rem hsla(var(--hue), 90%, 50%, 0.3);
+    background-color: #fff;
+    color: #000;
+}

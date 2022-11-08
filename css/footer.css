@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.content__font{
+    font-family: 'Space Mono', monospace;
+    margin: 0 15px;
+    font-size: 25px;
+}
+.content__1{
+    display: flex;
+}
+.content__2{
+    display: flex;
+}
+.content__2 a i{
+    margin: 0 20px;
+    padding: 10px 15px;
+    border-radius: 30%;
+    transition: 300ms;
+
+}
+.content__2 a i:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(133, 116, 228);
+}
+footer {
+    display: grid;
+    grid-template-rows: 1fr 10rem auto;
+    grid-template-areas: "main" "." "footer";
+    overflow-x: hidden;
+    min-height: 65vh;
+    font-family: 'Open Sans', sans-serif;
+}
+footer .footer__content {
+    z-index: 1;
+    --footer-background: rgb(133, 143, 219);
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+footer .footer__content .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+}
+footer .footer__content .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+footer .footer__content .content {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--footer-background);
+}
+footer .footer__content .content a, footer .footer__content .content p {
+    color: #f5f7fa;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Space Mono', monospace;
+}
+footer .footer__content .content b {
+    color: white;
+}
+.content:nth-child(0){
+    display: flex;
+}
+footer .footer__content .content > div > div {
+    margin: 0.25rem 0;
+}
+footer .footer__content .content > div > div > * {
+    margin-right: 0.5rem;
+}
+footer .footer__content .content > div .image {
+    align-self: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover;
+    background-position: center;
+}
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+   }
+    100% {
+        width: 0rem;
+        height: 0rem;
+   }
+}
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+   }
+    100% {
+        bottom: var(--distance, 10rem);
+   }
+}
+
+
+@media (max-width: 380px){
+    .content a{
+        font-size: 16px;
+    }
+    .content__font{
+        font-size: 20px !important;
+    }
+    .content{
+        display: flex !important;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+    .content__1 p:nth-child(2){
+        font-size: 20px !important; 
+    }
+    .content__2 a i{
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+}
