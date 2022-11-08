@@ -203,9 +203,9 @@ body{
         font-size: 25px;
     }
     .nav__link a{
-        padding: 0 5px;
-        margin: 0 5px;
-        font-size: 15px;
+        padding: 0 3px;
+        margin: 0 3px;
+        font-size: 14px;
     }
 }
 
