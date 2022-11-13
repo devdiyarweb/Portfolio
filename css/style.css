@@ -180,8 +180,8 @@ body{
         transform: translateX(0);
     }
     .arrowClock{
-        width: 400px !important;
-        height: 400px !important;
+        width: 320px !important;
+        height: 320px !important;
     }
     .two__clocks{
         align-items: center;
