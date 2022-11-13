@@ -195,6 +195,15 @@ body{
     }
 }
 @media (max-width: 380px){
+    .nav__list{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 50%;
+    }
+    .btn__div{
+        display: none;
+    }
     .arrowClock{
         width: 350px !important;
         height: 350px !important;
@@ -203,9 +212,9 @@ body{
         font-size: 25px;
     }
     .nav__link a{
-        padding: 0 3px;
-        margin: 0 3px;
-        font-size: 14px;
+        padding: 10px 3px;
+        margin: 10px 3px;
+        font-size: 19px;
     }
 }
 
