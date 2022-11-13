@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 *{
     margin: 0;
@@ -10,6 +10,9 @@
 }
 .btn__div{
     position: relative;
+}
+.burger{
+    display: none;       
 }
 .btn{
     position: absolute;
@@ -167,6 +170,15 @@ body{
 	}
 }
 @media (max-width: 430px){
+    .burger{
+        display: block;
+        font-size: 20px;
+        right: 5%;
+        z-index: 50;
+    }
+    .burger:hover ~ .nav__list{
+        transform: translateX(0);
+    }
     .arrowClock{
         width: 400px !important;
         height: 400px !important;
@@ -181,20 +193,34 @@ body{
         line-height: 2;
     }
     .nav__link a{
-        font-size: 19px;
+        font-size: 26px;
         padding: 0 10px;
         margin: 10px 10px;
+    }
+    .nav__link {
+        margin: 15px 0;
     }
     .nav__list{
         height: 70px;
         display: flex;
+        flex-direction: column;
+        left: 0;
+        min-height: 100vh;
+        justify-content: center;
+        background-color: #fff;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        z-index: 40;
+        top: 0; 
+        transition: 500ms;
+        transform: translateX(100%);
     }
     .nav__content{
-        flex-direction: column;
-        margin: 20px 0;
+        margin: 10px 0;
     }
 }
-@media (max-width: 380px){
+/* @media (max-width: 380px){
     .nav__list{
         display: flex;
         position: absolute;
@@ -216,7 +242,7 @@ body{
         margin: 10px 3px;
         font-size: 19px;
     }
-}
+} */
 
 /* Animations */
 @keyframes bounce {
