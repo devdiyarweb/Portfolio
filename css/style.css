@@ -25,6 +25,9 @@
     cursor: pointer;
     font-family: 'Space Mono', monospace;
 }
+.nav__link a i{
+    color: rgb(53, 40, 109);
+}
 :root{
     --hue: 223;
     --bg: hsl(var(--hue), 90%,90%);
@@ -200,6 +203,7 @@ body{
     .nav__link {
         margin: 15px 0;
     }
+
     .nav__list{
         height: 70px;
         display: flex;
