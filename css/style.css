@@ -28,7 +28,7 @@
     padding: 15px;
     max-width: 53%;
 }
-.h1__active:n8h-child(1){
+.h1__active:nth-child(1){
     transform: translateY(40%);
     transition-delay: 2s;
 }
@@ -216,6 +216,23 @@ body{
 	}
 }
 @media (max-width: 430px){
+    .blocks{
+        max-width: none;
+        margin: 0 0 5em 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__content{
+        flex-direction: column;
+    }
+    .hover__title-1{
+        font-size: 12px;
+    }
+    .h1__active{
+        font-size: 12px; 
+        max-width: 80%;     
+        margin: 10px;
+    }
     .burger{
         display: block;
         font-size: 20px;
