@@ -11,6 +11,49 @@
 .btn__div{
     position: relative;
 }
+.blocks{
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    align-items: flex-end;
+}
+.hover__title-1{
+    font-family: 'Space Mono', monospace ;
+    transform: translateY(20%);
+    transition: 500ms;
+    opacity: 0;
+    border-radius: 15%;
+    margin: 15px;
+    font-size: 15px;
+    padding: 15px;
+    max-width: 53%;
+}
+.h1__active:n8h-child(1){
+    transform: translateY(40%);
+    transition-delay: 2s;
+}
+.h1__active:nth-child(2){
+    transform: translateY(40%);
+    transition-delay: 4s;
+}
+.h1__active:nth-child(3){
+    transform: translateY(40%);
+    transition-delay: 6s;
+}
+.h1__active{
+    opacity: 1;
+    margin: 15px;
+    padding: 15px;
+    border-top-right-radius: 25%;
+    font-size: 15px;
+    text-align: center;
+    border-bottom-left-radius: 25%;
+    background-color: #fff;
+    transition: 1000ms;
+    transform: translateY(0);
+    max-width: 55%;
+    font-family: 'Space Mono', monospace;
+}
 .burger{
     display: none;       
 }
@@ -40,7 +83,7 @@
 header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 body{
     /* background: rgba(212 212 235 / 78%); */
@@ -63,7 +106,7 @@ body{
 }
 
 .clock__block{
-    width: 3em;
+    width: 2em;
     height: 2em;
     background-color: hsl(var(--hue), 10%, 90%);
     border-radius: 0.5rem;
